@@ -18,10 +18,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if (savedInstanceState != null && savedInstanceState.containsKey("num"))
+            number = savedInstanceState.getInt("num");
+
     mUnit=findViewById(R.id.unit);
     mMinus=findViewById(R.id.minus_button);
     mPlus=findViewById(R.id.plus_button);
     mReset=findViewById(R.id.reset_botton);
+
+        mUnit.setText(String.valueOf(number));
 
     mPlus.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -53,5 +58,11 @@ public class MainActivity extends AppCompatActivity {
         }
     });
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putInt("num",number);
+        super.onSaveInstanceState(outState);
     }
 }

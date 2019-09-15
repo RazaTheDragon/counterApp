@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/main_bg">
+
+
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Counter"
+       android:gravity="center"
+       android:textSize="40dp"
+       android:background="@android:color/holo_red_dark"
+       android:textColor="@android:color/white"
+      />
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="#80000000"/>-->
+
+   <TextView
+       android:id="@+id/unit"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:text="0"
+      android:textSize="100dp"
+       android:textColor="@android:color/white"
+      android:gravity="center"
+      android:layout_gravity="center_horizontal"
+       />
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingLeft="30dp"
+       android:paddingRight="30dp">
+      <Button
+          android:id="@+id/minus_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:text="  -  "
+         android:textSize="50dp"/>
+
+      <Button
+          android:id="@+id/plus_button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:text="  +  "
+          android:textSize="50dp" />
+
+   </RelativeLayout>
+      <Button
+          android:id="@+id/reset_botton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:text="Reset"
+         android:textSize="40dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="0dp"/>
+
+</LinearLayout>
